@@ -1,8 +1,9 @@
-@import "variables";
+@import "custom";
 @import "font_faces";
+@import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+@import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 @import "bootstrap.scss";
 @import "normalize.css";
 @import "reset-css";
 
-@import "custom";

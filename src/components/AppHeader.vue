@@ -21,7 +21,9 @@
                             text-field="text"
                             size="sm"/>
                     </div>
-                    <ButtonComponent class="btn--login" :text="'Log in'"/>
+                    <button class="btn--login">
+                        Log In
+                    </button>
                 </b-navbar-nav>
             </b-collapse>
         </b-container>
@@ -29,10 +31,8 @@
 </template>
 
 <script>
-import ButtonComponent from "@/components/ButtonComponent";
 export default {
     name: "AppHeader",
-    components: {ButtonComponent},
     data() {
         return {
             selected: 'usd',
@@ -85,9 +85,27 @@ export default {
     }
     .btn {
         &--login {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-family: $theme-font-family;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 150%;
+            background: white;
+            border: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border-radius: 10px;
+
             padding: 5px 28px;
             color: $theme-color;
             font-weight: 600;
+            transition: all .1s ease-in-out;
+            &:hover {
+                color: $box-office;
+                background-color: $delicate-viola;
+            }
             @include media-breakpoint-up(md) {
                 padding: 9px 41px;
             }
